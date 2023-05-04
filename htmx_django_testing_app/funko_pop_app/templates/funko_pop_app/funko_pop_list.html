@@ -1,0 +1,28 @@
+<table>
+    <tr>
+        <th>Number</th>
+        <th>Name</th>
+        <th>Line</th>
+        <th>Created Date</th>
+        <th>Vaulted</th>
+    </tr>
+    {% for funko_pop in funko_pops %}
+        <tr>
+            <td>
+                {{ funko_pop.number }}
+            </td>
+            <td>
+                {{ funko_pop.name }}
+            </td>
+            <td>
+                {{ funko_pop.line }}
+            </td>
+            <td>
+                {{ funko_pop.production_date }}
+            </td>
+            <td>
+                {{ funko_pop.is_vaulted|yesno:"Yes,No" }}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
